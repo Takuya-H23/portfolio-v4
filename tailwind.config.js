@@ -10,7 +10,7 @@ module.exports = {
     extend: {}
   },
   variants: {
-    typography: ['dark']
+    extend: {}
   },
   plugins: []
 }
