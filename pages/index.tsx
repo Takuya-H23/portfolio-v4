@@ -1,18 +1,19 @@
 import React from 'react'
 import { useTheme } from 'next-themes'
+import { Container } from '../components'
 
 const Index = () => {
   const { resolvedTheme, setTheme } = useTheme()
 
   return (
-    <div>
+    <Container>
       <h1>Hi! I'm Takuya Hirata</h1>
       <button
         onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
       >
         Toggle
       </button>
-    </div>
+    </Container>
   )
 }
 
