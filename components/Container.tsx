@@ -1,53 +1,16 @@
-import * as React from 'react'
-import {
-  Box,
-  Flex,
-  Drawer,
-  DrawerOverlay,
-  DrawerCloseButton,
-  DrawerContent,
-  IconButton,
-  DrawerBody
-} from '@chakra-ui/react'
-import { IoIosMenu, IoMdClose } from 'react-icons/io'
-
+import { Box, useTheme } from '@chakra-ui/react'
+import { Header } from './Header'
 type Props = {
   children: React.ReactNode
 }
 
 export const Container = ({ children }: Props) => {
-  const [isOpen, setIsOpen] = React.useState(false)
-
-  const handleClose = () => setIsOpen(false)
-  const handleOpen = () => setIsOpen(true)
+  const { breakpoints } = useTheme()
 
   return (
-    <div>
-      <Box as="header" p={[4]}>
-        <Flex justify="space-between" alignItems="center">
-          <div>Takua Hirata</div>
-          <IconButton
-            onClick={handleOpen}
-            aria-label="Open menu"
-            icon={<IoIosMenu />}
-          />
-          <Drawer
-            isOpen={isOpen}
-            onClose={handleClose}
-            placement="right"
-            closeOnEsc
-            closeOnOverlayClick
-          >
-            <DrawerOverlay />
-            <DrawerContent>
-              <DrawerCloseButton />
-              <DrawerBody> menu</DrawerBody>
-            </DrawerContent>
-            menu
-          </Drawer>
-        </Flex>
-      </Box>
+    <Box w={breakpoints.xl} maxW={'95%'} mx="auto" py={[4]}>
+      <Header />
       {children}
-    </div>
+    </Box>
   )
 }

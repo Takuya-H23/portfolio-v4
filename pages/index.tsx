@@ -8,11 +8,6 @@ const Index = () => {
   return (
     <Container>
       <h1>Hi! I'm Takuya Hirata</h1>
-      <button
-        onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-      >
-        Toggle
-      </button>
     </Container>
   )
 }
