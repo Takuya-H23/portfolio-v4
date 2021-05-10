@@ -1,4 +1,14 @@
 import * as React from 'react'
+import {
+  Box,
+  Flex,
+  Drawer,
+  DrawerOverlay,
+  DrawerCloseButton,
+  DrawerContent,
+  IconButton,
+  DrawerBody
+} from '@chakra-ui/react'
 import { IoIosMenu, IoMdClose } from 'react-icons/io'
 
 type Props = {
@@ -13,30 +23,30 @@ export const Container = ({ children }: Props) => {
 
   return (
     <div>
-      <header className="flex justify-between p-8">
-        <div>Takua Hirata</div>
-        <nav className="">
-          {isOpen && (
-            <div className="absolute top-0 bottom-0 left-0 right-0 bg-bg-d-primary dark:bg-bg-d-primary opacity-80 z-40" />
-          )}
-          <div
-            className={`absolute top-0 right-0 bg-bg-secondary dark:bg-bg-d-secondary p-8 transform duration-200 z-50 ${
-              isOpen ? 'translate-x-0' : 'translate-x-full'
-            }`}
+      <Box as="header" p={[4]}>
+        <Flex justify="space-between" alignItems="center">
+          <div>Takua Hirata</div>
+          <IconButton
+            onClick={handleOpen}
+            aria-label="Open menu"
+            icon={<IoIosMenu />}
+          />
+          <Drawer
+            isOpen={isOpen}
+            onClose={handleClose}
+            placement="right"
+            closeOnEsc
+            closeOnOverlayClick
           >
-            <button type="button" onClick={handleClose}>
-              <IoMdClose className="text-3xl" />
-            </button>
-            <ul>
-              <li>Home</li>
-              <li>About</li>
-            </ul>
-          </div>
-          <button type="button" onClick={handleOpen}>
-            <IoIosMenu className="text-3xl" />
-          </button>
-        </nav>
-      </header>
+            <DrawerOverlay />
+            <DrawerContent>
+              <DrawerCloseButton />
+              <DrawerBody> menu</DrawerBody>
+            </DrawerContent>
+            menu
+          </Drawer>
+        </Flex>
+      </Box>
       {children}
     </div>
   )

@@ -1,12 +1,11 @@
-import 'tailwindcss/tailwind.css'
 import type { AppProps } from 'next/app'
-import { ThemeProvider } from 'next-themes'
+import { ChakraProvider } from '@chakra-ui/react'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
-    <ThemeProvider attribute="class">
+    <ChakraProvider>
       <Component {...pageProps} />
-    </ThemeProvider>
+    </ChakraProvider>
   )
 }
 
