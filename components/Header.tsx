@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Link from 'next/link'
 import {
   Box,
   Flex,
@@ -7,15 +8,19 @@ import {
   DrawerCloseButton,
   DrawerContent,
   IconButton,
-  DrawerBody
+  DrawerBody,
+  List,
+  ListItem,
+  Text
 } from '@chakra-ui/react'
 import { IoIosMenu } from 'react-icons/io'
 
-export const Header = () => {
-  const [isOpen, setIsOpen] = React.useState(false)
+export const Header = (): JSX.Element => {
+  const [isOpen, setIsOpen] = React.useState(true)
 
   const handleClose = () => setIsOpen(false)
   const handleOpen = () => setIsOpen(true)
+
   return (
     <Box as="header">
       <Flex justify="space-between" alignItems="center">
@@ -33,9 +38,31 @@ export const Header = () => {
           closeOnOverlayClick
         >
           <DrawerOverlay />
-          <DrawerContent>
+          <DrawerContent pt={8}>
             <DrawerCloseButton />
-            <DrawerBody> menu</DrawerBody>
+            <DrawerBody>
+              <nav>
+                <List spacing={3}>
+                  <ListItem>
+                    <Link href="/">
+                      <a>
+                        <Text>Home</Text>
+                      </a>
+                    </Link>
+                  </ListItem>
+                  <ListItem>
+                    <Link href="/about">
+                      <a>About</a>
+                    </Link>
+                  </ListItem>
+                  <ListItem>
+                    <Link href="/note">
+                      <a>Note</a>
+                    </Link>
+                  </ListItem>
+                </List>
+              </nav>
+            </DrawerBody>
           </DrawerContent>
           menu
         </Drawer>
