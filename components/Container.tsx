@@ -24,15 +24,17 @@ export const Container = ({ children }: Props) => {
               isOpen ? 'translate-x-0' : 'translate-x-full'
             }`}
           >
-            <div className="text-white">
-              <IoMdClose onClick={handleClose} className="text-3xl" />
-            </div>
+            <button type="button" onClick={handleClose}>
+              <IoMdClose className="text-3xl" />
+            </button>
             <ul>
               <li>Home</li>
               <li>About</li>
             </ul>
           </div>
-          <IoIosMenu onClick={handleOpen} className="text-3xl" />
+          <button type="button" onClick={handleOpen}>
+            <IoIosMenu className="text-3xl" />
+          </button>
         </nav>
       </header>
       {children}
