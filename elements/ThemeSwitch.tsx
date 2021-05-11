@@ -3,7 +3,7 @@ import { useColorMode, HStack, Switch } from '@chakra-ui/react'
 import { SunIcon, MoonIcon } from '@chakra-ui/icons'
 import { useIsMounted } from '../hooks'
 
-const isLight = theme => theme === 'light'
+const isLight = (theme: 'light' | 'dark'): boolean => theme === 'light'
 
 export const ThemeSwitch = () => {
   const { toggleColorMode, colorMode } = useColorMode()
@@ -21,7 +21,13 @@ export const ThemeSwitch = () => {
   return (
     <HStack>
       <MoonIcon />
-      <Switch size="md" isChecked={isChecked} onChange={handleChange} />
+      <Switch
+        size="md"
+        isChecked={isChecked}
+        onChange={handleChange}
+        aria-label="Toggle theme"
+        data-testid="switch-label"
+      />
       <SunIcon />
     </HStack>
   )
