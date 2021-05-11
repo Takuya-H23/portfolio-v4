@@ -1,14 +1,17 @@
 import React from 'react'
-import { useTheme } from 'next-themes'
+import { Heading, Text } from '@chakra-ui/react'
 import { Container } from '../components'
-import styles from '../styles/logo.module.css'
 
 const Index = () => {
-  const { resolvedTheme, setTheme } = useTheme()
-
   return (
     <Container>
-      <div>contents</div>
+      <Heading as="h1" mb={[2]}>
+        Hi! I'm Takuya
+      </Heading>
+      <Text>
+        Welcome to my portfolio stie/playground! I built this application using
+        Next.js, Chakra UI and MongoDB. Feel free to explore and contact me!
+      </Text>
     </Container>
   )
 }

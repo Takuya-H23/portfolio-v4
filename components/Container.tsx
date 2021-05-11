@@ -8,9 +8,9 @@ export const Container = ({ children }: Props) => {
   const { breakpoints } = useTheme()
 
   return (
-    <Box w={breakpoints.xl} maxW={'95%'} mx="auto" py={[4]}>
+    <Box w={breakpoints.xl} maxW={['92%', '92%', '95%']} mx="auto" py={[4]}>
       <Header />
-      {children}
+      <Box mt={[12]}>{children}</Box>
     </Box>
   )
 }
