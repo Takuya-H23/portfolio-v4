@@ -13,9 +13,7 @@ export const ThemeSwitch = () => {
   const handleChange = () => setIsChecked(cur => !cur)
 
   React.useEffect(() => {
-    console.log(isMounted)
     if (isMounted) {
-      console.log('run')
       toggleColorMode()
     }
   }, [isChecked])
