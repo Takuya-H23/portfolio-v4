@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { GetServerSideProps } from 'next'
 import {
   ChakraProvider,
   cookieStorageManager,
