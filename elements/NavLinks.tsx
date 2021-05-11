@@ -8,14 +8,13 @@ type Route = {
 
 type Props = {
   routes: Route[]
-  handleClose: () => void
 }
 
-export const NavLinks = ({ routes, handleClose }: Props) => (
+export const NavLinks = ({ routes }: Props) => (
   <nav>
     <List spacing={[3]}>
       {routes.map(({ URL, LABEL }) => (
-        <ListItem onClick={handleClose} key={LABEL}>
+        <ListItem key={LABEL}>
           <Link href={URL}>
             <a>{LABEL}</a>
           </Link>
