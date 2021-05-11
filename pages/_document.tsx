@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { ColorModeScript } from '@chakra-ui/react'
 
 class MyDocument extends Document {
   render() {
@@ -7,7 +8,8 @@ class MyDocument extends Document {
         <Head>
           <meta name="author" content="Takuya Hirata" />
         </Head>
-        <body className="bg-bg-primary dark:bg-bg-d-primary text-text-primary dark:text-text-d-primary">
+        <body>
+          <ColorModeScript />
           <Main />
           <NextScript />
         </body>

@@ -5,9 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest --coverage"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^1.0.13",
+    "@chakra-ui/react": "^1.6.1",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "framer-motion": "^4",
     "next": "latest",
     "next-themes": "^0.0.14",
     "react": "^17.0.1",
@@ -15,9 +21,14 @@
     "react-icons": "^4.2.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.0.2",
+    "@types/ramda": "^0.27.40",
     "@types/react": "^17.0.5",
-    "autoprefixer": "^10.0.4",
-    "postcss": "^8.1.10",
-    "tailwindcss": "^2.1.1"
+    "babel-jest": "^26.6.3",
+    "cypress": "^7.3.0",
+    "jest": "^26.6.3"
   }
 }

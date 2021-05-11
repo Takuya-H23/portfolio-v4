@@ -1,13 +1,14 @@
-import 'tailwindcss/tailwind.css'
 import type { AppProps } from 'next/app'
-import { ThemeProvider } from 'next-themes'
+import { Chakra } from '../elements'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
-    <ThemeProvider attribute="class">
+    <Chakra cookies={pageProps.cookies}>
       <Component {...pageProps} />
-    </ThemeProvider>
+    </Chakra>
   )
 }
+
+export { getServerSideProps } from '../elements'
 
 export default MyApp

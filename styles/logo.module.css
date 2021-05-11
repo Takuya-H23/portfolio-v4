@@ -1,0 +1,22 @@
+.logoBase {
+  stroke: #ffffff;
+  stroke-width: 3.5;
+  fill: none;
+  animation: drewAnimation 2s linear forwards;
+}
+
+.right {
+  stroke-dasharray: 716.0350341796875;
+  stroke-dashoffset: 716.0350341796875;
+}
+
+.left {
+  stroke-dasharray: 521.4798583984375;
+  stroke-dashoffset: 521.4798583984375;
+}
+
+@keyframes drewAnimation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
