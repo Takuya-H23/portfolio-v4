@@ -1,11 +1,11 @@
 import { render } from 'test-utils'
-import { useIsMounted } from '../useIsMounted'
+import { useIsInitialRender } from '../useIsInitialRender'
 
 const init = 'initial render'
 const second = 'not initial render'
 
 const TestComponent = () => {
-  const isMounted = useIsMounted()
+  const isMounted = useIsInitialRender()
   return <div data-testid="test">{isMounted ? second : init}</div>
 }
 

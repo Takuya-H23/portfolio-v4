@@ -1,19 +1,19 @@
 import * as React from 'react'
 import { useColorMode, HStack, Switch } from '@chakra-ui/react'
 import { SunIcon, MoonIcon } from '@chakra-ui/icons'
-import { useIsMounted } from '../hooks'
+import { useIsInitialRender } from '../hooks'
 
 const isLight = (theme: 'light' | 'dark'): boolean => theme === 'light'
 
 export const ThemeSwitch = () => {
   const { toggleColorMode, colorMode } = useColorMode()
   const [isChecked, setIsChecked] = React.useState(isLight(colorMode))
-  const isMounted = useIsMounted()
+  const isInitialRender = useIsInitialRender()
 
   const handleChange = () => setIsChecked(cur => !cur)
 
   React.useEffect(() => {
-    if (isMounted) {
+    if (isInitialRender) {
       toggleColorMode()
     }
   }, [isChecked])

@@ -1,1 +1,1 @@
-export { useIsMounted } from './useIsMounted'
+export { useIsInitialRender } from './useIsInitialRender'

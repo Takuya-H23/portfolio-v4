@@ -6,7 +6,7 @@ beforeEach(jest.clearAllMocks)
 
 const spy = jest.spyOn(Chakra, 'useColorMode')
 
-const renderer = (theme, val) => {
+const renderer = (theme: string, val: boolean) => {
   spy.mockImplementation(() => ({
     toggleColorMode: jest.fn(),
     colorMode: theme

@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export const useIsMounted = () => {
+export const useIsInitialRender = () => {
   const ref = React.useRef(false)
   React.useEffect(() => {
     ref.current = true
