@@ -1,5 +1,5 @@
-import { Grid, List, ListItem, Heading } from '@chakra-ui/react'
-import { Container } from '../components'
+import { Box, Grid, List, ListItem, Heading } from '@chakra-ui/react'
+import { Container, ContactForm } from '../components'
 import { PageTop } from '../elements'
 
 const About = () => {
@@ -92,6 +92,10 @@ const About = () => {
         <ListItem>LinkedIn</ListItem>
         <ListItem>Twitter</ListItem>
       </Grid>
+      <Heading as="h2" size="md" mt={[12]} mb={[4]}>
+        Contact
+      </Heading>
+      <ContactForm />
     </Container>
   )
 }
