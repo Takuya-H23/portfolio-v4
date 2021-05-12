@@ -1,22 +1,19 @@
-import { Grid, List, ListItem, Heading, Text } from '@chakra-ui/react'
+import { Grid, List, ListItem, Heading } from '@chakra-ui/react'
 import { Container } from '../components'
+import { PageTop } from '../elements'
 
 const About = () => {
   return (
     <Container>
-      <Heading as="h1">About Me</Heading>
-      <Text mt={[4]}>
-        My name is Takuya and I'm a motivated developer based in Toronoto. Other
-        than working as a developer, I have published some npm packages to help
-        me write better code.
-      </Text>
-      <Text mt={[4]}>
-        I enjoy riding my sport motorcycle, playing video games, baseball and
-        coding.
-      </Text>
-
+      <PageTop
+        heading="About Me"
+        paragraphs={[
+          "My name is Takuya and I'm a motivated developer based in Toronto. Other than working as a developer, I have published some npm packages to help me write better code.",
+          'I enjoy riding sport motorcycles, playing video games, baseball and coding.'
+        ]}
+      />
       <Heading as="h2" size="md" mt={[12]}>
-        Technologies I have been using
+        Favourite Technologies
       </Heading>
       <Grid
         as={List}
@@ -32,7 +29,6 @@ const About = () => {
         <ListItem>JavaScript</ListItem>
         <ListItem>TypeScript</ListItem>
         <ListItem>Next.js</ListItem>
-        <ListItem>Gatsby.js</ListItem>
         <ListItem>Node.js</ListItem>
         <ListItem>GraphQL</ListItem>
         <ListItem>MongoDB</ListItem>
@@ -41,7 +37,7 @@ const About = () => {
       </Grid>
 
       <Heading as="h2" size="md" mt={[12]}>
-        Favourite npm packages
+        Favourite NPM Packages
       </Heading>
       <Grid
         as={List}
@@ -60,7 +56,7 @@ const About = () => {
       </Grid>
 
       <Heading as="h2" size="md" mt={[12]}>
-        Favourite tools
+        Favourite Tools
       </Heading>
       <Grid
         as={List}

@@ -1,17 +1,16 @@
 import React from 'react'
-import { Heading, Text } from '@chakra-ui/react'
 import { Container } from '../components'
+import { PageTop } from '../elements'
 
 const Index = () => {
   return (
     <Container>
-      <Heading as="h1" mb={[2]}>
-        Hi! I'm Takuya
-      </Heading>
-      <Text>
-        Welcome to my portfolio stie/playground! I built this application using
-        Next.js, Chakra UI and MongoDB. Feel free to explore and contact me!
-      </Text>
+      <PageTop
+        heading="Hi! I'm Takuya"
+        paragraphs={[
+          'Welcome to my portfolio stie/playground! I built this application using Next.js, Chakra UI and MongoDB. Feel free to explore and contact me!'
+        ]}
+      />
     </Container>
   )
 }
