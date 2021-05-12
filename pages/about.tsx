@@ -77,6 +77,25 @@ const About = () => {
         <ListItem>Iterm2</ListItem>
         <ListItem>Kinesis Advantage2</ListItem>
       </Grid>
+      <Heading as="h2" size="md" mt={[12]}>
+        Links
+      </Heading>
+      <Grid
+        as={List}
+        templateColumns={[
+          'repeat(2, 1fr)',
+          'repeat(3, 1fr)',
+          'repeat(4, 1fr)',
+          'repeat(5, 1fr)'
+        ]}
+        mt={[4]}
+        gap={2}
+      >
+        <ListItem>Github</ListItem>
+        <ListItem>NPM</ListItem>
+        <ListItem>LinkedIn</ListItem>
+        <ListItem>Twitter</ListItem>
+      </Grid>
     </Container>
   )
 }
