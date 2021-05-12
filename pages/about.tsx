@@ -41,7 +41,7 @@ const About = () => {
       </Grid>
 
       <Heading as="h2" size="md" mt={[12]}>
-        Favorite npm packages
+        Favourite npm packages
       </Heading>
       <Grid
         as={List}
@@ -60,7 +60,7 @@ const About = () => {
       </Grid>
 
       <Heading as="h2" size="md" mt={[12]}>
-        Favorite tools
+        Favourite tools
       </Heading>
       <Grid
         as={List}
